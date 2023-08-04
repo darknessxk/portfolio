@@ -1,9 +1,9 @@
 import { cva, type VariantProps } from "class-variance-authority"
 import React from "react";
+import Avatar from "@/images/avatar.jpg";
 import {Hero} from "@components/Hero";
 import {Title} from "@components/Title";
 import usePageNavigation from "@context/PageNavigation.context";
-import Avatar from "@/images/avatar.jpg";
 
 const heroOnboard = cva(
     [

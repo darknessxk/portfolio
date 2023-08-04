@@ -1,9 +1,9 @@
 import React from "react";
+import CardImage from "@/images/card_image.png"
 import {ContentSection} from "@components/ContentSection";
 import {Project} from "@components/Project";
 import usePageNavigation from "@context/PageNavigation.context";
 import {IProject} from "@interfaces/IProject.interface";
-import CardImage from "@/images/card_image.png"
 
 export interface ProjectsSectionProps {
     projects: Array<IProject>

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { Project } from "@components/Project"
 import CardImage from "@/images/card_image.png"
+import { Project } from "@components/Project"
 
 const meta: Meta<typeof Project> = {
     title: "Project",
