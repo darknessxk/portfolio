@@ -40,7 +40,7 @@ export interface FooterProps extends React.HTMLAttributes<HTMLDivElement>, Varia
 
 export function Footer({ className, items, socials, logo, source, ...props }: FooterProps) {
     const ref = React.useRef<HTMLDivElement | null>(null);
-    const { setRef } = usePageNavigation();
+    const { setRef, getRef } = usePageNavigation();
 
     React.useEffect(() => {
         if (ref.current) {
@@ -63,7 +63,7 @@ export function Footer({ className, items, socials, logo, source, ...props }: Fo
                             ({href, icon}, index) => {
                                 const Icon = GetIconFromStringHelper(icon)
                                 if (Icon === null || Icon === undefined) return null
-                                return <Button spacing={"sm"} key={index} href={href}><Icon /></Button>
+                                return <Button newTab key={index} size={"xs"} spacing={"sm"} href={href}><Icon /></Button>
                             }
                         )
                     }
@@ -77,7 +77,13 @@ export function Footer({ className, items, socials, logo, source, ...props }: Fo
                     {
                         items.map(
                             ({text, href}, index) =>
-                                <Button key={index} href={href}>{text}</Button>
+                                <Button key={index} href={href} onClick={(e) => {
+                                    const ref = getRef(href)
+                                    if (ref) {
+                                        ref.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+                                    }
+                                    e.preventDefault()
+                                }}>{text}</Button>
                         )
                     }
                 </div>

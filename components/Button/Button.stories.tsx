@@ -10,6 +10,7 @@ const meta: Meta<typeof Button> = {
         border: false,
         children: "Home",
         size: "lg",
+        spacing: "lg"
     },
     argTypes: {
         intent: {
@@ -20,6 +21,10 @@ const meta: Meta<typeof Button> = {
             options: ["sm", "lg"],
             control: { type: "select" },
         },
+        spacing: {
+            options: ["sm", "lg"],
+            control: { type: "select" },
+        }
     },
 }
 

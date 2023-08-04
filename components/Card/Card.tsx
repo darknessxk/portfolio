@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import { twMerge } from "tailwind-merge"
 import { Tag } from "@components/Tag";
 
@@ -60,7 +60,7 @@ const cardImage = cva(
             },
             imgSize: {
                 md: [ "w-48", "h-48" ],
-                lg: [ "w-full", "h-full" ],
+                lg: [ "w-full", "h-fit" ],
             },
         },
         defaultVariants: {
@@ -75,7 +75,7 @@ export interface CardProps extends
     VariantProps<typeof cardContainer>,
     VariantProps<typeof cardContent>,
     VariantProps<typeof cardImage> {
-    cardImageSrc: string;
+    cardImageSrc: string | StaticImageData;
     cardImageAlt: string;
     tags?: string[];
 }
@@ -83,7 +83,9 @@ export interface CardProps extends
 export function Card({ intent, cardImageSrc, cardImageAlt, tags, className, imgSize, ...props }: CardProps) {
     return (
         <div className={twMerge(cardContainer({ intent, className }))}>
-            <Image className={twMerge(cardImage({ intent, imgSize }))} src={cardImageSrc} alt={cardImageAlt} />
+            <Image className={twMerge(cardImage({ intent, imgSize }))}
+                   src={cardImageSrc} alt={cardImageAlt}
+                   width={192} height={192} />
             <div className={twMerge(cardContent({ intent }))}>
                 {props.children}
             </div>

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { Project } from "@components/Project"
+import CardImage from "@/images/card_image.png"
 
 const meta: Meta<typeof Project> = {
     title: "Project",
@@ -9,7 +10,7 @@ const meta: Meta<typeof Project> = {
         title: "Portfolio",
         description: "Portfolio description",
         size: "lg",
-        cardImageSrc: "https://v1.tailwindcss.com/img/card-top.jpg",
+        cardImageSrc: CardImage,
         cardImageAlt: "Image Alt",
         stack: ["Typescript", "Next.js", "TailwindCSS", "Storybook"],
         source: "",

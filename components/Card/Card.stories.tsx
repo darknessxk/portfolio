@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { Card } from "@components/Card"
+import CardImage from "@/images/card_image.png"
 
 const meta: Meta<typeof Card> = {
     title: "Card",
@@ -8,7 +9,7 @@ const meta: Meta<typeof Card> = {
         intent: "primary",
         children: "Label",
         size: "lg",
-        cardImageSrc: "https://v1.tailwindcss.com/img/card-top.jpg",
+        cardImageSrc: CardImage,
         cardImageAlt: "Image Alt",
         tags: ["photography"],
     },

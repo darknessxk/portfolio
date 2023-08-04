@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority"
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import {forwardRef} from "react";
 import { twMerge } from "tailwind-merge"
 import {Section} from "@components/Section";
@@ -31,7 +31,7 @@ const heroImage = cva(
 )
 
 export interface HeroProps extends React.HTMLAttributes<HTMLDivElement> {
-    image: string;
+    image: string | StaticImageData;
     imageAlt: string;
 }
 
@@ -44,7 +44,9 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ image, imageAlt, children,
         <div className={twMerge(heroImage({  }))}>
             <Image
                 className="shadow rounded-full max-h-64 align-middle border-none grayscale"
-                src={image} alt={imageAlt} />
+                src={image} alt={imageAlt}
+                width={192} height={192}
+            />
         </div>
     </Section>
 ))

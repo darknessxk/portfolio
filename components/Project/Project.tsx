@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge"
 import {Card} from "@components/Card";
 import {Label} from "@components/Label";
 import {Link} from "@components/Link";
+import {StaticImageData} from "next/image";
 
 const cardTitle = cva(
     [
@@ -96,7 +97,7 @@ export interface ProjectProps extends
     React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof cardTitle>,
     VariantProps<typeof cardDescription> {
-    cardImageSrc: string;
+    cardImageSrc: string | StaticImageData;
     cardImageAlt: string;
     className?: string;
     title: string;
@@ -108,7 +109,7 @@ export interface ProjectProps extends
 
 export function Project({ title, className, description, intent, size, cardImageSrc, cardImageAlt, stack, source, preview }: ProjectProps) {
     return (
-        <Card className={twMerge(className, "mx-3")} cardImageSrc={cardImageSrc} cardImageAlt={cardImageAlt} imgSize={"md"} size={size}>
+        <Card className={twMerge(className, "mx-3", "my-4")} cardImageSrc={cardImageSrc} cardImageAlt={cardImageAlt} size={size}>
             <div className={twMerge(cardTitle({ intent }))}>{title}</div>
             <div className={twMerge(cardDescription({ intent }))}>
                 {description}

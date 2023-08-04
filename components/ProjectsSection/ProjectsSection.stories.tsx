@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { ProjectsSection } from "@components/ProjectsSection"
+import CardImage from "@/images/card_image.png"
 
 const meta: Meta<typeof ProjectsSection> = {
     title: "Projects Section",
@@ -11,7 +12,7 @@ const meta: Meta<typeof ProjectsSection> = {
                 description: "Description 1",
                 preview: "Preview 1",
                 source: "Source 1",
-                imageSrc: "https://v1.tailwindcss.com/img/card-top.jpg",
+                imageSrc: CardImage,
                 stack: ["React", "TailwindCSS"],
             },
             {
@@ -19,7 +20,7 @@ const meta: Meta<typeof ProjectsSection> = {
                 description: "Description 1",
                 preview: "Preview 1",
                 source: "Source 1",
-                imageSrc: "https://v1.tailwindcss.com/img/card-top.jpg",
+                imageSrc: CardImage,
                 stack: ["React", "TailwindCSS"],
             },
             {
@@ -27,7 +28,7 @@ const meta: Meta<typeof ProjectsSection> = {
                 description: "Description 1",
                 preview: "Preview 1",
                 source: "Source 1",
-                imageSrc: "https://v1.tailwindcss.com/img/card-top.jpg",
+                imageSrc: CardImage,
                 stack: ["React", "TailwindCSS"],
             }
         ],

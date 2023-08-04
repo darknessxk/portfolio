@@ -71,7 +71,7 @@ export function Navbar({ items, socials, logo, intent, ...props }: NavbarProps) 
                             ({href, icon}, index) => {
                                 const Icon = GetIconFromStringHelper(icon)
                                 if (Icon === null || Icon === undefined) return null
-                                return <Button key={index} spacing={"sm"} href={href}><Icon /></Button>
+                                return <Button newTab key={index} size={"xs"} spacing={"sm"} href={href}><Icon /></Button>
                             }
                         )
                     }

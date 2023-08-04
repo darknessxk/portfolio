@@ -3,6 +3,7 @@ import React from "react";
 import {Hero} from "@components/Hero";
 import {Title} from "@components/Title";
 import usePageNavigation from "@context/PageNavigation.context";
+import Avatar from "@/images/avatar.jpg";
 
 const heroOnboard = cva(
     [
@@ -34,7 +35,7 @@ export function HeroOnboard() {
 
     return (
         <Hero
-            image={"https://media.licdn.com/dms/image/C4D03AQEiWPoZ0XT58A/profile-displayphoto-shrink_800_800/0/1575553503527?e=1696464000&v=beta&t=DCKM4aojY8yzMwViD_em2rIz1BrF0sLD-Oyx4GdKCHA"}
+            image={Avatar}
             imageAlt={"Luiz Felipe"}
             ref={ref}
         >
