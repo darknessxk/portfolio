@@ -1,15 +1,15 @@
-import React from "react";
+import * as Tooltip from '@radix-ui/react-tooltip';
 import { cva } from "class-variance-authority"
+import React from "react";
 import { twMerge } from "tailwind-merge"
-import {Tag} from "@components/Tag";
-import {ContentSection} from "@components/ContentSection";
-import {GetIconFromStringHelper} from "@helpers/GetIconFromString.helper";
-import {IStack} from "@interfaces/IStack.interface";
 import {StackTagType} from "@/types/StackTag.type";
+import {ContentSection} from "@components/ContentSection";
+import {Label} from "@components/Label";
+import {Tag} from "@components/Tag";
 import {StackTagConstants} from "@constants/StackTag.constants";
 import usePageNavigation from "@context/PageNavigation.context";
-import * as Tooltip from '@radix-ui/react-tooltip';
-import {Label} from "@components/Label";
+import {GetIconFromStringHelper} from "@helpers/GetIconFromString.helper";
+import {IStack} from "@interfaces/IStack.interface";
 
 const stackItem = cva(
     [
@@ -25,7 +25,7 @@ export interface StackSectionProps {
     stack: Array<IStack>
 }
 
-export function StackSection({ stack, ...props }: StackSectionProps) {
+export function StackSection({ stack }: StackSectionProps) {
     const ref = React.useRef<HTMLDivElement | null>(null);
     const { setRef } = usePageNavigation();
 
@@ -33,7 +33,7 @@ export function StackSection({ stack, ...props }: StackSectionProps) {
         if (ref.current) {
             setRef("stack", ref);
         }
-    }, [ref.current])
+    }, [ref, setRef])
 
     const [SelectedTags, setSelectedTags] = React.useState<Array<StackTagType>>([]);
 

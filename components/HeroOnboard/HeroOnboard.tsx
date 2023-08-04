@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority"
+import React from "react";
 import {Hero} from "@components/Hero";
 import {Title} from "@components/Title";
-import React from "react";
 import usePageNavigation from "@context/PageNavigation.context";
 
 const heroOnboard = cva(
@@ -12,7 +12,6 @@ const heroOnboard = cva(
         "justify-between",
         "items-center",
         "bg-gray-100",
-        "bg-opacity-50",
         "h-screen"
     ],
     {
@@ -21,10 +20,9 @@ const heroOnboard = cva(
     }
 )
 
-export interface HeroProps extends VariantProps<typeof heroOnboard> {
-}
+export type HeroProps = VariantProps<typeof heroOnboard>
 
-export function HeroOnboard({ ...props }: HeroProps) {
+export function HeroOnboard() {
     const ref = React.useRef<HTMLDivElement | null>(null);
     const { setRef } = usePageNavigation();
 
@@ -32,7 +30,7 @@ export function HeroOnboard({ ...props }: HeroProps) {
         if (ref.current) {
             setRef("home", ref);
         }
-    }, [ref.current])
+    }, [ref, setRef])
 
     return (
         <Hero

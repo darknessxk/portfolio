@@ -1,10 +1,10 @@
 import { cva, type VariantProps } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
 import {Button} from "@components/Button";
+import usePageNavigation from "@context/PageNavigation.context";
+import {GetIconFromStringHelper} from "@helpers/GetIconFromString.helper";
 import {INavItem} from "@interfaces/INavItem.interface";
 import {ISocial} from "@interfaces/ISocial.interface";
-import {GetIconFromStringHelper} from "@helpers/GetIconFromString.helper";
-import usePageNavigation from "@context/PageNavigation.context";
 
 const navbar = cva(
     [

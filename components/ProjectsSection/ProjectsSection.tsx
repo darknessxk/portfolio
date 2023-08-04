@@ -1,8 +1,8 @@
-import {Project} from "@components/Project";
-import {ContentSection} from "@components/ContentSection";
-import {IProject} from "@interfaces/IProject.interface";
 import React from "react";
+import {ContentSection} from "@components/ContentSection";
+import {Project} from "@components/Project";
 import usePageNavigation from "@context/PageNavigation.context";
+import {IProject} from "@interfaces/IProject.interface";
 
 export interface ProjectsSectionProps {
     projects: Array<IProject>
@@ -16,7 +16,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
         if (ref.current) {
             setRef("projects", ref);
         }
-    }, [ref.current])
+    }, [ref, setRef])
 
     return (
         <ContentSection ref={ref} title={"Projects"} description={"Things I’ve built so far"}>

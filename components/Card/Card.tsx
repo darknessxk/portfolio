@@ -1,6 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority"
+import Image from "next/image";
 import { twMerge } from "tailwind-merge"
-import {Tag} from "../Tag/Tag";
+import { Tag } from "@components/Tag";
 
 const cardContainer = cva(
     [
@@ -58,7 +59,7 @@ const cardImage = cva(
                 primary: [],
             },
             imgSize: {
-                md: [ "w-42", "h-42", "min-w-42", "min-h-42", "max-w-42", "max-h-42" ],
+                md: [ "w-48", "h-48" ],
                 lg: [ "w-full", "h-full" ],
             },
         },
@@ -79,17 +80,17 @@ export interface CardProps extends
     tags?: string[];
 }
 
-export function Card({ intent, size, cardImageSrc, cardImageAlt, tags, className, imgSize, ...props }: CardProps) {
+export function Card({ intent, cardImageSrc, cardImageAlt, tags, className, imgSize, ...props }: CardProps) {
     return (
         <div className={twMerge(cardContainer({ intent, className }))}>
-            <img className={twMerge(cardImage({ intent, imgSize }))} src={cardImageSrc} alt={cardImageAlt} />
+            <Image className={twMerge(cardImage({ intent, imgSize }))} src={cardImageSrc} alt={cardImageAlt} />
             <div className={twMerge(cardContent({ intent }))}>
                 {props.children}
             </div>
             {
                 tags && <div className="px-6 pt-4 pb-2">
                     {tags.map((tag, index) =>
-                        <Tag name={index !== tags.length - 1 ? `${tag},` : tag} />
+                        <Tag key={index} name={index !== tags.length - 1 ? `${tag},` : tag} />
                     )}
                 </div>
             }

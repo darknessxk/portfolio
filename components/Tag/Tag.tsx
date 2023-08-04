@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import { twMerge } from "tailwind-merge"
 import {forwardRef} from "react";
+import { twMerge } from "tailwind-merge"
 
 const tag = cva(
     [
@@ -38,9 +38,11 @@ export interface TagProps extends React.HTMLAttributes<HTMLSpanElement>, Variant
 
 const Tag = forwardRef<HTMLSpanElement, TagProps>(
     ({ className, intent, size, name, selected, ...props }, ref) =>
-        <span className={twMerge(tag({ intent, selected, className }))} {...props}>
+        <span ref={ref} className={twMerge(tag({ intent, selected, className, size }))} {...props}>
             {name}
         </span>
 )
+
+Tag.displayName = "Tag";
 
 export default Tag

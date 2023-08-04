@@ -1,12 +1,11 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import { twMerge } from "tailwind-merge"
 import {forwardRef} from "react";
+import { twMerge } from "tailwind-merge"
 
 const section = cva(
     [
         "flex",
-        "min-h-[80vh]",
-        "h-fit-content",
+        "min-h-[80vh]"
     ],
     {
         variants: {
@@ -27,5 +26,7 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(({className, center, ch
         {children}
     </section>
 )
+
+Section.displayName = "Section";
 
 export default Section

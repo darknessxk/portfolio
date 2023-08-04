@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from "class-variance-authority"
 
-import { twMerge } from "tailwind-merge"
-import {GoLink} from "react-icons/go";
 import {FaGithub} from "react-icons/fa6";
+import {GoLink} from "react-icons/go";
+import { twMerge } from "tailwind-merge"
 import {Card} from "@components/Card";
 import {Label} from "@components/Label";
 import {Link} from "@components/Link";

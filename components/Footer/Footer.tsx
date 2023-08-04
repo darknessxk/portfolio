@@ -1,13 +1,13 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import { twMerge } from "tailwind-merge"
+import React from "react";
 import {FaGithub} from "react-icons/fa6";
-import {Label} from "@components/Label";
+import { twMerge } from "tailwind-merge"
 import {Button} from "@components/Button";
+import {Label} from "@components/Label";
+import usePageNavigation from "@context/PageNavigation.context";
+import {GetIconFromStringHelper} from "@helpers/GetIconFromString.helper";
 import {INavItem} from "@interfaces/INavItem.interface";
 import {ISocial} from "@interfaces/ISocial.interface";
-import {GetIconFromStringHelper} from "@helpers/GetIconFromString.helper";
-import React from "react";
-import usePageNavigation from "@context/PageNavigation.context";
 
 const footer = cva(
     [
@@ -46,7 +46,7 @@ export function Footer({ className, items, socials, logo, source, ...props }: Fo
         if (ref.current) {
             setRef("contact", ref);
         }
-    }, [ref.current])
+    }, [ref, setRef])
 
     return (
         <footer ref={ref} className={twMerge(footer({ className }))} {...props}>

@@ -9,10 +9,8 @@ const link = cva(
         "rounded-xl",
         "text-center",
         "transition-colors",
-        "delay-50",
-        "min-w-20",
+        "delay-75",
         "h-full",
-        "min-h-10",
         "text-sm",
         "px-2"
     ],
@@ -22,7 +20,7 @@ const link = cva(
                 primary: ["text-gray-500", "dark:text-white", "font-semibold"],
             },
             underline: { true: ["underline"], false: [] },
-            border: { true: ["border-b-2", "rounded-0"], false: ["border-b-0"] },
+            border: { true: ["border-b-2", "rounded"], false: ["border-b-0"] },
         },
         defaultVariants: {
             intent: "primary",

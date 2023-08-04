@@ -9,7 +9,7 @@ describe('Link', () => {
     });
 
     it('should render the component with a custom class', () => {
-        render(<Link href={"https://www.google.com"} className={"custom-class"}>Google</Link>)
-        expect(screen.getByText('Google')).toHaveClass("custom-class")
+        render(<Link href={"https://www.google.com"} className={"delay-300"}>Google</Link>)
+        expect(screen.getByText('Google')).toHaveClass("delay-300")
     });
 });

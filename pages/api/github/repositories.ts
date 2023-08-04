@@ -1,12 +1,12 @@
 import type { NextRequest } from 'next/server'
-import {env} from "@/env.mjs";
 import {NextResponse} from "next/server";
+import {env} from "@/env.mjs";
 
 export const config = {
     runtime: 'edge',
 }
 
-export default async function handler(req: NextRequest) {
+export default async function handler(_req: NextRequest) {
     const fetchRes = await fetch("https://api.github.com/user/repos", {
         headers: {
             "Authorization": `Bearer ${env.GITHUB_TOKEN}`,

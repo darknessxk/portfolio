@@ -1,13 +1,13 @@
 import Head from "next/head"
-import {Navbar} from "@components/Navbar";
-import {HeroOnboard} from "@components/HeroOnboard";
-import {StackSection} from "@components/StackSection";
-import {ProjectsSection} from "@components/ProjectsSection";
-import {Footer} from "@components/Footer";
-import {Logo} from "@components/Logo";
-import {IAIOApiInterface} from "@interfaces/IAIOApi.interface";
 import {useQuery} from "react-query";
+import {Footer} from "@components/Footer";
+import {HeroOnboard} from "@components/HeroOnboard";
 import {LoadingSection} from "@components/LoadingSection";
+import {Logo} from "@components/Logo";
+import {Navbar} from "@components/Navbar";
+import {ProjectsSection} from "@components/ProjectsSection";
+import {StackSection} from "@components/StackSection";
+import {IAIOApiInterface} from "@interfaces/IAIOApi.interface";
 import {INavItem} from "@interfaces/INavItem.interface";
 
 

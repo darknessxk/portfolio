@@ -1,9 +1,9 @@
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva } from "class-variance-authority"
+import {forwardRef} from "react";
 import { twMerge } from "tailwind-merge"
+import {Label} from "@components/Label";
 import {Section} from "@components/Section";
 import {Title} from "@components/Title";
-import {Label} from "@components/Label";
-import {forwardRef} from "react";
 
 const projectsContainer = cva(
     [
@@ -21,7 +21,7 @@ export interface ProjectsSectionProps extends React.HTMLAttributes<HTMLDivElemen
 }
 
 const ContentSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
-    ({ title, description, children, ...props }, ref) =>
+    ({ title, description, children }, ref) =>
         (
             <Section className={twMerge(projectsContainer())} ref={ref}>
                 <div className={"flex flex-col justify-center items-center"}>
@@ -33,5 +33,7 @@ const ContentSection = forwardRef<HTMLDivElement, ProjectsSectionProps>(
             </Section>
         )
 )
+
+ContentSection.displayName = "ContentSection"
 
 export default ContentSection

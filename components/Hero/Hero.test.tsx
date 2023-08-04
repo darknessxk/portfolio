@@ -3,11 +3,11 @@ import '@testing-library/jest-dom/extend-expect'
 import { Hero } from '@components/Hero';
 
 describe('Hero', () => {
-    const children = <div>Hello, I'm Luiz</div>;
+    const children = <div>Hello</div>;
 
     it('should render the component', () => {
         render(<Hero image={""} imageAlt={"hero image"}>{children}</Hero>)
-        expect(screen.getByText('Hello, I\'m Luiz')).toBeInTheDocument()
+        expect(screen.getByText('Hello')).toBeInTheDocument()
     })
 
     it('should render the image', () => {

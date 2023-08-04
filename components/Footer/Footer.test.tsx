@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect'
+import { render, screen } from '@testing-library/react';
 import { Footer } from '@components/Footer';
-import {FaGithub, FaLinkedin} from "react-icons/fa6";
 
 describe('Footer', () => {
     const items = [
@@ -10,8 +9,8 @@ describe('Footer', () => {
     ];
 
     const socials = [
-        { href: "#", name: "Github", icon: <FaGithub /> },
-        { href: "#", name: "LinkedIn", icon: <FaLinkedin /> },
+        { href: "#", icon: "FaGithub" },
+        { href: "#", icon: "FaLinkedin" },
     ];
 
     const source = "#";

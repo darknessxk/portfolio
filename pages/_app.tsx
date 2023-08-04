@@ -1,6 +1,6 @@
 import "../styles/tailwind.css"
-import { DM_Sans } from "next/font/google";
 import { AppProps } from "next/app"
+import { DM_Sans } from "next/font/google";
 import {QueryClient, QueryClientProvider} from "react-query";
 
 const dm_sans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '700'] })

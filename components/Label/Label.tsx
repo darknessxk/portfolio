@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge"
 const label = cva(
     [
         "transition-colors",
-        "delay-50",
+        "delay-75",
     ],
     {
         variants: {

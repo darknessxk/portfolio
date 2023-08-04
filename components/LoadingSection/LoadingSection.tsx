@@ -1,8 +1,8 @@
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva } from "class-variance-authority"
 import { twMerge } from "tailwind-merge"
+import {Label} from "@components/Label";
 import {Section} from "@components/Section";
 import {Title} from "@components/Title";
-import {Label} from "@components/Label";
 
 const loadingSection = cva(
     [
@@ -14,10 +14,9 @@ const loadingSection = cva(
     }
 )
 
-export interface LoadingSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-}
+export type LoadingSectionProps = React.HTMLAttributes<HTMLDivElement>
 
-export function LoadingSection({ children, ...props }: LoadingSectionProps) {
+export function LoadingSection({ children }: LoadingSectionProps) {
     return (
         <Section className={twMerge(loadingSection())}>
             <div className={"flex flex-col justify-center items-center"}>

@@ -5,7 +5,7 @@ const title = cva(
     [
         "rounded-xl",
         "transition-colors",
-        "delay-50",
+        "delay-75",
         "font-light",
     ],
     {

@@ -11,7 +11,7 @@ describe('Label', () => {
     })
 
     it('should render the component with a custom class', () => {
-        render(<Label className={"custom-class"}>{children}</Label>)
-        expect(screen.getByText(children)).toHaveClass("custom-class")
+        render(<Label className={"delay-300"}>{children}</Label>)
+        expect(screen.getByText(children)).toHaveClass("delay-300")
     })
 });

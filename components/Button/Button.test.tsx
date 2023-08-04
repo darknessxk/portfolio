@@ -13,9 +13,9 @@ describe('Button', () => {
     })
 
     it('should render the button with a custom class', () => {
-        render(<Button href={"#"} className={"custom-class"}>{text}</Button>)
+        render(<Button href={"#"} className={"delay-300"}>{text}</Button>)
 
         expect(screen.getByText(text)).toBeInTheDocument();
-        expect(screen.getByText(text)).toHaveClass("custom-class");
+        expect(screen.getByText(text)).toHaveClass("delay-300");
     });
 })
