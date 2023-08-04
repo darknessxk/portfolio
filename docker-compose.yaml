@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  app:
+    image: node:18.16.0
+    environment:
+      HTTPS_METHOD: noredirect
+    volumes:
+      - ./:/usr/src/app/
+    working_dir: /usr/src/app
+    labels:
+      - traefik.enable=true
+      - traefik.constraint-label-stack=apollo
+      - traefik.docker.network=apollo-shared
+      # load balancer
+      - traefik.http.services.nextjs_portfolio.loadbalancer.server.port=3000
+      # http
+      - traefik.http.routers.nextjs_portfolio.entrypoints=http
+      - traefik.http.routers.nextjs_portfolio.rule=Host(`darknessxk.local`)
+      - traefik.http.routers.nextjs_portfolio.service=nextjs_portfolio
+    command: yarn dev
+  storybook:
+    image: node:18.16.0
+    environment:
+      HTTPS_METHOD: noredirect
+    volumes:
+      - ./:/usr/src/app/
+    working_dir: /usr/src/app
+    labels:
+      - traefik.enable=true
+      - traefik.constraint-label-stack=apollo
+      - traefik.docker.network=apollo-shared
+      # load balancer
+      - traefik.http.services.nextjs_portfolio_storybook.loadbalancer.server.port=6006
+      # http
+      - traefik.http.routers.nextjs_portfolio_storybook.entrypoints=http
+      - traefik.http.routers.nextjs_portfolio_storybook.rule=Host(`storybook.darknessxk.local`)
+      - traefik.http.routers.nextjs_portfolio_storybook.service=nextjs_portfolio_storybook
+    command: yarn storybook
+networks:
+  default:
+    external: true
+    name: apollo-shared

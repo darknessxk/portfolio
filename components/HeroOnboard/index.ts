@@ -1,0 +1,1 @@
+export { HeroOnboard } from './HeroOnboard';

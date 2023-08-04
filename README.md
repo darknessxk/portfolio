@@ -1,18 +1,6 @@
-# Next.js Enterprise Boilerplate
-
-![Project intro image](./project-logo.png)
-
-Welcome to the _Next.js Enterprise Boilerplate_, an open-source template for enterprise projects! It's loaded with features that'll help you build a high-performance, maintainable, and enjoyable app. We've done all the heavy lifting for you, so sit back, relax, and get ready to conquer the world with your incredible app! 🌍
-
-<br />
-<a href="https://discord.gg/fyWtyNKmfX" style="width: 100%; display: flex; justify-content: center;">
-  <img src="https://discordapp.com/api/guilds/1111676875782234175/widget.png?style=banner2" alt="Blazity Discord Banner"/>
-</a>
-<br />
+# darknessxk @ portfolio
 
 ## 📚 Features
-
-With this template, you get all the awesomeness you need:
 
 - 🏎️ **[Next.js](https://nextjs.org/)** - Fast by default, with config optimized for performance
 - 💅 **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework for rapid UI development
@@ -40,29 +28,27 @@ With this template, you get all the awesomeness you need:
 
 ## Table of Contents
 
-- [Next.js Enterprise Boilerplate](#nextjs-enterprise-boilerplate)
-  - [📚 Features](#-features)
-  - [Table of Contents](#table-of-contents)
-  - [🎯 Getting Started](#-getting-started)
-  - [🚀 Deployment](#-deployment)
-  - [📃 Scripts Overview](#-scripts-overview)
-  - [🔗 Coupling Graph](#-coupling-graph)
-  - [🧪 Testing](#-testing)
-    - [Running Tests](#running-tests)
-    - [Acceptance Tests](#acceptance-tests)
-    - [Smoke Testing](#smoke-testing)
-  - [🎨 Styling and Design System](#-styling-and-design-system)
-    - [CVA - A New Approach to Variants](#cva---a-new-approach-to-variants)
-  - [💾 State Management](#-state-management)
-    - [Zustand](#zustand)
-    - [Jotai](#jotai)
-    - [Recoil](#recoil)
-  - [🤖 ChatGPT Code Review](#-chatgpt-code-review)
-  - [💻 Environment Variables handling](#-environment-variables-handling)
-  - [🤝 Contribution](#-contribution)
-  - [💌 Support](#support)
-  - [📜 License](#-license)
-  - [Contributors](#contributors)
+- [📚 Features](#-features)
+- [Table of Contents](#table-of-contents)
+- [🎯 Getting Started](#-getting-started)
+- [🚀 Deployment](#-deployment)
+- [📃 Scripts Overview](#-scripts-overview)
+- [🔗 Coupling Graph](#-coupling-graph)
+- [🧪 Testing](#-testing)
+  - [Running Tests](#running-tests)
+  - [Acceptance Tests](#acceptance-tests)
+  - [Smoke Testing](#smoke-testing)
+- [🎨 Styling and Design System](#-styling-and-design-system)
+  - [CVA - A New Approach to Variants](#cva---a-new-approach-to-variants)
+- [💾 State Management](#-state-management)
+  - [Zustand](#zustand)
+  - [Jotai](#jotai)
+  - [Recoil](#recoil)
+- [🤖 ChatGPT Code Review](#-chatgpt-code-review)
+- [💻 Environment Variables handling](#-environment-variables-handling)
+- [🤝 Contribution](#-contribution)
+- [📜 License](#-license)
+- [Contributors](#contributors)
 
 ## 🎯 Getting Started
 
@@ -98,9 +84,7 @@ pre-commit install -t commit-msg
 
 ## 🚀 Deployment
 
-Easily deploy your Next.js app with [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=github&utm_campaign=next-enterprise) by clicking the button below:
-
-[![Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise)
+[![Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/darknessxk/portfolio)
 
 ## 📃 Scripts Overview
 
@@ -134,8 +118,6 @@ yarn coupling-graph
 
 This will create a `graph.svg` file, which contains a graphical representation of the connections between your components. You can open the file with any SVG-compatible viewer.
 
-![graph](https://user-images.githubusercontent.com/28964599/233662744-3ba89713-8466-49cd-9be7-e6fb38191f58.png)
-
 ## 🧪 Testing
 
 This boilerplate comes with various testing setups to ensure your application's reliability and robustness.
@@ -145,8 +127,6 @@ This boilerplate comes with various testing setups to ensure your application's 
 - **Unit and integration tests**: Run Jest tests using `yarn test`
 - **End-to-end tests (headless mode)**: Run Playwright tests in headless mode with `yarn e2e:headless`
 - **End-to-end tests (UI mode)**: Run Playwright tests with UI using `yarn e2e:ui`
-
-<img width="1392" alt="image" src="https://user-images.githubusercontent.com/28964599/233666655-93b7d08b-2fd8-406a-b43c-44d4d96cf387.png">
 
 ### Acceptance Tests
 
@@ -191,8 +171,6 @@ In this boilerplate, we use Storybook's out-of-the-box support for smoke testing
 ## 🎨 Styling and Design System
 
 This boilerplate uses Tailwind CSS for styling and CVA for creating a powerful, easy-to-use design system. If you want to learn more about the setup, check out this fantastic video by Vercel:
-
-[![Styling and Design System](https://img.youtube.com/vi/T-Zv73yZ_QI/0.jpg)](https://www.youtube.com/watch?v=T-Zv73yZ_QI&ab_channel=Vercel)
 
 ### CVA - A New Approach to Variants
 
@@ -256,46 +234,9 @@ If the required environment variables are not set, you'll get an error message:
   ❌ Invalid environment variables: { SECRET_KEY: [ 'Required' ] }
 ```
 
-## 🤝 Contribution
-
-Contributions are always welcome! To contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch with a descriptive name.
-3. Make your changes, and commit them using the [Conventional Commits](https://www.conventionalcommits.org/) format.
-4. Push your changes to the forked repository.
-5. Create a pull request, and we'll review your changes.
-
-## Support
-
-If you're looking for help or simply want to share your thoughts about the project, we encourage you to join our Discord community. Here's the link: [https://blazity.com/discord](https://blazity.com/discord). It's a space where we exchange ideas and help one another. Everyone's input is appreciated, and we look forward to welcoming you.
-
 ## 📜 License
 
 This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
-
-## Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://bstefanski.com/"><img src="https://avatars.githubusercontent.com/u/28964599?v=4?s=100" width="100px;" alt="Bart Stefanski"/><br /><sub><b>Bart Stefanski</b></sub></a><br /><a href="https://github.com/Blazity/next-enterprise/commits?author=bmstefanski" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jjablonski-it"><img src="https://avatars.githubusercontent.com/u/51968772?v=4?s=100" width="100px;" alt="Jakub Jabłoński"/><br /><sub><b>Jakub Jabłoński</b></sub></a><br /><a href="#infra-jjablonski-it" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td align="center" size="13px" colspan="7">
-        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
-          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
-        </img>
-      </td>
-    </tr>
-  </tfoot>
-</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
