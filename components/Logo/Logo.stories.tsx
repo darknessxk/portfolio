@@ -5,14 +5,9 @@ const meta: Meta<typeof Logo> = {
     title: "Logo",
     component: Logo,
     args: {
-        intent: "primary",
         size: "lg",
     },
     argTypes: {
-        intent: {
-            options: ["primary"],
-            control: { type: "select" },
-        },
         size: {
             options: ["sm", "lg"],
             control: { type: "select" },
