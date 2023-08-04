@@ -13,7 +13,7 @@ const meta: Meta<typeof HeroOnboard> = {
 type Story = StoryObj<typeof HeroOnboard>
 
 export const Default: Story = {
-    render: (args) => <HeroOnboard {...args} />,
+    render: () => <HeroOnboard />,
 }
 
 export default meta
