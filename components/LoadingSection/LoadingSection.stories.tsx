@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { LoadingSection } from "./LoadingSection"
+import { LoadingSection } from "@components/LoadingSection"
 
 const meta: Meta<typeof LoadingSection> = {
     title: "Loading Section",

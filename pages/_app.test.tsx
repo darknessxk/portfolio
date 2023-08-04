@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
 import { AppProps } from "next/app"
-import MyApp from "./_app"
+import MyApp from "@pages/_app"
 
 // Mock router object with required properties
 const router = {
